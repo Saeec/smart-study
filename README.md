@@ -1,6 +1,5 @@
-Perfect 🚀 Here’s a **long, well-structured GitHub README description** you can add for your project:
 
----
+
 
 ## 📘 Smart Study Dashboard
 
@@ -61,6 +60,3 @@ The app is designed for students who want to:
 
 This project combines **time management + task organization + analytics** to create a one-stop study companion.
 
----
-
-Would you like me to also generate a **sample README layout** (with sections like Installation, Usage, Screenshots, etc.) so your GitHub looks even more professional?
