@@ -1,0 +1,792 @@
+/* frontend/src/App.css */
+
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f1f5f9; /* slate-100 */
+}
+
+/* Main App Container */
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form & Page Container Styles */
+.page-container {
+    width: 100%;
+    max-width: 448px; /* max-w-md */
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 1rem; /* rounded-2xl */
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* shadow-lg */
+    padding: 2rem;
+}
+
+.page-container-large {
+    width: 100%;
+    max-width: 896px; /* max-w-4xl */
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Typography */
+.form-title {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700;
+    text-align: center;
+    color: #374151; /* text-gray-700 */
+    margin-bottom: 1.5rem;
+}
+
+.home-title {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700;
+    color: #374151; /* text-gray-700 */
+}
+
+.text-label {
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 700;
+    color: #4b5563; /* text-gray-600 */
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-footer-text {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6b7280; /* text-gray-500 */
+}
+
+.link {
+    font-weight: 600;
+    color: #3b82f6; /* text-blue-500 */
+    text-decoration: none;
+}
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #f1f5f9; /* bg-slate-100 */
+    border: 2px solid #e2e8f0; /* border-slate-200 */
+    border-radius: 0.5rem; /* rounded-lg */
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #93c5fd; /* border-blue-300 */
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.btn-primary {
+    background-color: #a7f3d0; /* bg-emerald-300 */
+    color: #065f46; /* text-emerald-800 */
+}
+.btn-primary:hover {
+    background-color: #6ee7b7; /* hover:bg-emerald-400 */
+}
+.btn-primary:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.btn-danger {
+    margin-top: 2rem;
+    background-color: #fca5a5; /* bg-red-300 */
+    color: #991b1b; /* text-red-800 */
+}
+.btn-danger:hover {
+    background-color: #f87171; /* hover:bg-red-400 */
+}
+
+
+/* Messages */
+.error-message {
+    color: #ef4444; /* text-red-500 */
+    font-size: 0.875rem;
+}
+.success-message {
+    color: #22c55e; /* text-green-500 */
+    font-size: 0.875rem;
+}
+/* frontend/src/App.css */
+
+/* --- PASTE THIS AT THE BOTTOM OF YOUR EXISTING App.css FILE --- */
+
+/* Timer Display */
+.timer-display {
+    font-size: 6rem; /* text-8xl */
+    font-weight: 700;
+    color: #be185d; /* text-rose-800 */
+    letter-spacing: -0.05em;
+    margin: 1rem 0;
+}
+
+/* Main sections inside Home page */
+.timer-section {
+    background-color: #fce7f3; /* bg-rose-50 */
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+    margin-bottom: 2rem;
+}
+
+.controls-section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-start {
+    background-color: #a7f3d0; color: #065f46;
+}
+.btn-start:hover {
+    background-color: #6ee7b7;
+}
+
+.btn-pause {
+    background-color: #fde68a; color: #92400e;
+}
+.btn-pause:hover {
+    background-color: #fcd34d;
+}
+
+.btn-reset {
+    background-color: #fca5a5; color: #991b1b;
+}
+.btn-reset:hover {
+    background-color: #f87171;
+}
+
+/* Subject Management */
+.subject-section {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.subject-select {
+    flex-grow: 1;
+    padding: 0.75rem;
+    background-color: #f1f5f9;
+    border: 2px solid #e2e8f0;
+    border-radius: 0.5rem;
+}
+.btn-add {
+    background-color: #93c5fd; color: #1e40af;
+    white-space: nowrap;
+}
+.btn-add:hover {
+    background-color: #60a5fa;
+}
+
+/* Analytics and History Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.stats-container, .history-container {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+}
+.stats-container { background-color: #e0f2fe; } /* bg-blue-50 */
+.history-container { background-color: #f5f3ff; } /* bg-purple-50 */
+
+.stats-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 0.75rem;
+}
+
+.history-item, .stats-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.item-subject { font-weight: 500; }
+.item-date { font-size: 0.75rem; color: #6b7280; }
+.item-duration { font-weight: 600; color: #374151; }
+/* frontend/src/App.css */
+
+/* --- PASTE THIS AT THE BOTTOM OF YOUR EXISTING CSS FILE --- */
+
+.add-task-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr auto;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-left: 5px solid;
+}
+
+.task-item.priority-low { border-color: #22c55e; }
+.task-item.priority-medium { border-color: #f59e0b; }
+.task-item.priority-high { border-color: #ef4444; }
+
+.task-item.completed {
+    opacity: 0.6;
+    background-color: #f9fafb;
+}
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    color: #6b7280;
+}
+
+.task-item-main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.task-title {
+    font-weight: 600;
+    color: #374151;
+}
+
+.task-subject {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.task-item-details {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.task-priority {
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    color: white;
+}
+.priority-low .task-priority { background-color: #22c55e; }
+.priority-medium .task-priority { background-color: #f59e0b; }
+.priority-high .task-priority { background-color: #ef4444; }
+
+
+.btn-delete {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-weight: 500;
+}
+/* --- Dashboard Styles --- */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.stats-container, .history-container {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+}
+.stats-container { background-color: #e0f2fe; } /* bg-blue-50 */
+.history-container { background-color: #f5f3ff; } /* bg-purple-50 */
+
+.stats-header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 0.75rem;
+}
+
+.history-item, .stats-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.item-subject { font-weight: 500; }
+.item-date { font-size: 0.75rem; color: #6b7280; }
+.item-duration { font-weight: 600; color: #374151; }
+/* --- Layout Styles --- */
+
+.layout-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1f5f9;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-right: 1px solid #e2e8f0;
+}
+
+.sidebar-header {
+    margin-bottom: 2rem;
+}
+
+.sidebar-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #374151;
+}
+
+.sidebar-user {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #4b5563;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link:hover {
+    background-color: #f1f5f9;
+}
+
+.nav-link.active {
+    background-color: #e0f2fe;
+    color: #0c4a6e;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+}
+
+.btn-logout {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    background-color: #fee2e2;
+    color: #991b1b;
+    transition: background-color 0.2s;
+}
+
+.btn-logout:hover {
+    background-color: #fecaca;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+/* frontend/src/App.css */
+
+/* --- PASTE THIS AT THE BOTTOM OF YOUR EXISTING CSS FILE --- */
+
+.add-task-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr auto;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-left: 5px solid;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.task-item.priority-low { border-color: #22c55e; }
+.task-item.priority-medium { border-color: #f59e0b; }
+.task-item.priority-high { border-color: #ef4444; }
+
+.task-item.completed {
+    opacity: 0.6;
+    background-color: #f9fafb;
+}
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    color: #6b7280;
+}
+
+.task-item-main {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.task-title {
+    font-weight: 600;
+    color: #374151;
+}
+
+.task-subject {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.task-item-details {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.875rem;
+}
+
+.task-priority {
+    font-weight: 500;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    color: white;
+    font-size: 0.75rem;
+}
+.priority-low .task-priority { background-color: #22c55e; }
+.priority-medium .task-priority { background-color: #f59e0b; }
+.priority-high .task-priority { background-color: #ef4444; }
+
+
+.btn-delete {
+    background: none;
+    border: none;
+    color: #ef4444;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-delete:hover {
+    text-decoration: underline;
+}
+/* frontend/src/App.css */
+
+/* --- PASTE THIS AT THE BOTTOM OF YOUR EXISTING CSS FILE --- */
+
+/* Timer Display */
+.timer-display {
+    font-size: 6rem; /* text-8xl */
+    font-weight: 700;
+    color: #be185d; /* text-rose-800 */
+    letter-spacing: -0.05em;
+    margin: 1rem 0;
+}
+
+/* Main sections inside Home page */
+.timer-section {
+    background-color: #fce7f3; /* bg-rose-50 */
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+    margin-bottom: 2rem;
+}
+
+.controls-section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn-start {
+    background-color: #a7f3d0; color: #065f46;
+}
+.btn-start:hover {
+    background-color: #6ee7b7;
+}
+
+.btn-pause {
+    background-color: #fde68a; color: #92400e;
+}
+.btn-pause:hover {
+    background-color: #fcd34d;
+}
+
+.btn-reset {
+    background-color: #fca5a5; color: #991b1b;
+}
+.btn-reset:hover {
+    background-color: #f87171;
+}
+
+/* Subject Management */
+.subject-section {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.subject-select {
+    flex-grow: 1;
+    padding: 0.75rem;
+    background-color: #f1f5f9;
+    border: 2px solid #e2e8f0;
+    border-radius: 0.5rem;
+}
+.btn-add {
+    background-color: #93c5fd; color: #1e40af;
+    white-space: nowrap;
+}
+.btn-add:hover {
+    background-color: #60a5fa;
+}
+
+/* --- Chart Styles --- */
+
+.chart-container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+/* frontend/src/App.css */
+
+/* --- PASTE THIS AT THE BOTTOM OF YOUR EXISTING CSS FILE --- */
+
+.notes-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.add-note-container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.add-note-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.note-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.notes-list-container {
+    max-height: 75vh;
+    overflow-y: auto;
+}
+
+.notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.note-item {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.note-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.note-subject {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.note-content {
+    white-space: pre-wrap; /* Preserves line breaks */
+    margin-bottom: 1rem;
+}
+
+.note-summary {
+    background-color: #f0f9ff;
+    border-left: 4px solid #3b82f6;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-top: 1rem;
+}
+
+.note-summary h4 {
+    margin: 0 0 0.5rem 0;
+    color: #1e40af;
+}
+
+.note-summary pre {
+    white-space: pre-wrap;
+    font-family: inherit;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.btn-summarize {
+    width: auto;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    background-color: #dbeafe;
+    color: #1e40af;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+}
+
+.btn-summarize:hover {
+    background-color: #bfdbfe;
+}
+
+.btn-summarize:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+/* frontend/src/App.css */
+/* frontend/src/App.css */
+
+/* --- Add or replace these styles at the bottom of your CSS file --- */
+
+/* Add overflow-x hidden to the main container to prevent scrollbars during animation */
+.layout-container {
+    overflow-x: hidden;
+}
+
+/* Add transition and a negative margin to the sidebar for the sliding effect */
+.sidebar {
+    transition: margin-left 0.3s ease-in-out;
+    margin-left: 0;
+    flex-shrink: 0; /* Prevent the sidebar from shrinking */
+}
+
+/* When collapsed, the sidebar slides completely off-screen to the left */
+.sidebar.collapsed {
+    margin-left: -250px; /* This should match the sidebar's width */
+}
+
+/* New style to align the title and the button */
+.sidebar-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Updated styles for the toggle button */
+.sidebar-toggle-btn {
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    width: 32px; /* Made smaller */
+    height: 32px; /* Made smaller */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4b5563;
+}
+
+.sidebar-toggle-btn:hover {
+    background-color: #e2e8f0;
+}
